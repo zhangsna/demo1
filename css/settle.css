@@ -1,0 +1,185 @@
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-flex;
+  flex-direction: column; }
+
+.header {
+  height: 63px;
+  line-height: 63px;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 16px;
+  text-align: center;
+  position: relative; }
+  .header .hl {
+    position: absolute;
+    left: 15px; }
+  .header .hr {
+    position: absolute;
+    right: 15px; }
+
+.content {
+  flex: 1;
+  overflow-y: scroll; }
+  .content .address {
+    height: 88px;
+    position: relative; }
+    .content .address h3 {
+      font-size: 15px;
+      padding-left: 32px;
+      padding-top: 12px; }
+      .content .address h3 span {
+        font-weight: 100;
+        padding-left: 5%; }
+    .content .address .al {
+      position: absolute;
+      top: 45px;
+      left: 15px;
+      font-size: 18px; }
+    .content .address p {
+      font-size: 13px;
+      padding-left: 34px;
+      margin-top: 15px;
+      padding-right: 32px; }
+    .content .address .ar {
+      position: absolute;
+      top: 38px;
+      right: 15px;
+      font-size: 12px; }
+  .content .banner img {
+    width: 100%; }
+  .content .shop {
+    height: 150px; }
+    .content .shop h3 {
+      height: 46px;
+      padding-left: 15px; }
+      .content .shop h3 img {
+        display: block;
+        float: left;
+        width: 20px;
+        height: 18px;
+        padding-top: 12px; }
+      .content .shop h3 span {
+        display: block;
+        float: left;
+        padding-left: 2%;
+        font-weight: 100;
+        padding-top: 13px; }
+    .content .shop dl {
+      height: 104px;
+      display: -webkit-flex; }
+      .content .shop dl dt {
+        width: 30%;
+        padding-left: 14px; }
+        .content .shop dl dt img {
+          width: 102px;
+          height: 102px; }
+      .content .shop dl dd {
+        width: 70%;
+        padding-right: 13px; }
+        .content .shop dl dd h3 {
+          font-size: 14px;
+          font-weight: 100; }
+        .content .shop dl dd p {
+          float: left;
+          padding-left: 13px;
+          padding-top: 17px; }
+          .content .shop dl dd p b {
+            font-size: 13px;
+            color: #fc4141; }
+        .content .shop dl dd label {
+          margin-top: 18px;
+          display: inline-block;
+          margin-left: 6%; }
+          .content .shop dl dd label input {
+            border: 1px solid #ccc;
+            width: 50px;
+            height: 30px;
+            text-align: center; }
+          .content .shop dl dd label button {
+            border: none; }
+          .content .shop dl dd label .decrement {
+            width: 30px;
+            height: 30px; }
+          .content .shop dl dd label .increment {
+            width: 30px;
+            height: 30px; }
+  .content .list {
+    height: 90px;
+    margin-top: 15px;
+    padding-left: 14px;
+    border-bottom: 10px solid #eee; }
+    .content .list ul li {
+      line-height: 25px;
+      font-size: 12px;
+      position: relative; }
+      .content .list ul li span {
+        position: absolute;
+        right: 14px; }
+      .content .list ul li .span3 {
+        font-size: 15px;
+        color: #fc4141; }
+  .content .list1 {
+    height: 174px;
+    border-bottom: 10px solid #eee; }
+    .content .list1 ul {
+      padding-left: 13px;
+      padding-right: 13px; }
+      .content .list1 ul li {
+        line-height: 58px;
+        font-size: 17px;
+        position: relative;
+        border-bottom: 1px solid #e5e5e5; }
+        .content .list1 ul li span {
+          position: absolute;
+          top: 10px;
+          right: 14px; }
+        .content .list1 ul li .span3 {
+          position: absolute;
+          top: -1px;
+          right: 14px;
+          font-size: 16px; }
+
+.footer {
+  height: 60px;
+  display: -webkit-flex; }
+  .footer .left {
+    width: 60%; }
+    .footer .left h3 {
+      font-size: 15px;
+      color: #fc4141;
+      margin-top: 11px;
+      padding-left: 60px; }
+      .footer .left h3 span {
+        font-weight: 100; }
+    .footer .left p {
+      margin-top: 3px;
+      font-size: 13px;
+      padding-left: 105px; }
+  .footer .right {
+    width: 40%;
+    background-color: #fc4141;
+    font-size: 19px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-weight: 600; }
+
+.opacity {
+  width: 92%;
+  font-size: 15px;
+  color: #fff;
+  height: 38px;
+  opacity: 0.8;
+  background-color: #000;
+  position: absolute;
+  bottom: 70px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 38px;
+  margin-left: 4%;
+  display: none; }
+
+/*# sourceMappingURL=settle.css.map */

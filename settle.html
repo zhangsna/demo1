@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结算</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/iconfont.css">
+    <link type="text/css" rel="stylesheet" href="Font-Awesome-3.2.1/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/swiper.css">
+    <link type="text/css" rel="stylesheet" href="css/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="css/button.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/settle.css">
+</head>
+<body ng-app="app" ng-controller="notepad">
+    <header class="header">
+        <a href="#" class="hl"><i class="fa fa-angle-left"></i></a>
+        订单支付
+        <a href="#" class="hr"><i class="fa fa-cloud"></i></a>
+    </header>
+    <section class="content">
+        <div class="address">
+            <h3>路飞 <span>138****8888</span></h3>
+            <a href="" class="al"><i class="icon-map-marker"></i></a>
+            <p>北京市海淀区知春路北京市海淀区知春路北京市海淀区 知春路</p>
+            <a href="" class="ar"><i class="fa fa-angle-right"></i></a>
+        </div>
+        <div class="banner">
+            <img src="images/icons/img4_02.png" alt="">
+        </div>
+        <div class="shop">
+            <h3>
+                <img src="images/icons/img2_03.png" alt="">
+                <span>恒之然旗舰店</span>
+            </h3>
+            <dl>
+                <dt><img src="images/icons/img1_03.png" alt=""></dt>
+                <dd>
+                    <h3>维维嚼益嚼水果大豆棒橙味维维嚼 益嚼水果大豆棒橙味...</h3>
+                    <p><b>￥{{price}}.00</b> <br><s>￥1000.00</s></p>
+                    <label for="">
+                        <button ng-click="decrement()" class="decrement">-</button><input type="text" value="1" ng-model="count"><button ng-click="increment()" class="increment">+</button>
+                    </label>
+                </dd>
+            </dl>
+        </div>
+        <div class="list">
+            <ul>
+                <li>商品总金额: <span>￥{{totalCount}}.00</span></li>
+                <li>运费: <span>￥10.00</span></li>
+                <li>总额(含运费):  <span class="span3">￥{{totalCount+10}}.00</span></li>
+            </ul>
+        </div>
+        <div class="list1">
+            <ul>
+                <li>余额支付 ¥100.00
+                    <span>
+                        <label class="toggle-radio toggle-radio-danger">
+                            <input type="checkbox">
+
+                            <div class="track">
+                                <div class="icon"></div>
+                            </div>
+                        </label>
+                    </span>
+
+               </li>
+                <li>奖金支付 ¥100.00
+                    <span>
+                        <label class="toggle-radio toggle-radio-danger">
+                            <input type="checkbox">
+
+                            <div class="track">
+                                <div class="icon"></div>
+                            </div>
+                        </label>
+                    </span>
+
+                </li>
+                <li>其他支付方式 <span class="span3"><i class="fa fa-angle-right"></i></span></li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="left">
+            <h3><span>总价：</span>￥{{totalCount+10}}.00</h3>
+            <p>(含运费)</p>
+        </div>
+        <div class="right">
+            提交订单
+        </div>
+    </footer>
+    <div class="opacity">金额不足，请选择其他支付方式！</div>
+    <script type="text/javascript" src="../libs/angular.js"></script>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('app', []);
+
+        app.controller('notepad', function($scope) {
+
+            $scope.count = 1;
+            $scope.price = 988;
+            //$scope.price = 100;
+            $scope.decrement = function() {
+                if($scope.count>1){
+                    $scope.count--;
+                    $scope.totalCount= $scope.price*$scope.count
+                }
+
+                //$scope.totalCount = $scope.price*$scope.count;
+            };
+            $scope.increment = function() {
+                $scope.count++;
+                $scope.totalCount= $scope.price*$scope.count
+                //$scope.totalCount = $scope.price*$scope.count;
+            };
+        });
+
+
+        $('.right').on('click', function() {
+            $('.opacity').css('display', 'block');
+        })
+    </script>
+</body>
+</html>
